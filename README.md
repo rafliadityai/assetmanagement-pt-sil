@@ -52,3 +52,30 @@ Selain itu, pastikan bahwa ekstensi berikut diaktifkan di PHP Anda:
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
 - xml (diaktifkan secara default - jangan matikan)
+
+# Proyek CodeIgniter 4
+
+Proyek ini adalah contoh implementasi menggunakan framework CodeIgniter 4 untuk pembangunan aplikasi web.
+
+## Persyaratan
+
+Sebelum memulai, pastikan Anda memiliki persyaratan berikut diinstal di sistem Anda:
+
+- PHP 7.2 atau versi lebih tinggi
+- Composer (untuk mengelola dependensi proyek)
+
+## Instalasi
+
+1. Clone repositori ini ke direktori lokal Anda:
+
+```bash
+git clone https://github.com/assetmanagement-pt-sil/nama_repositori.git
+
+cd nama_repositori
+
+composer install
+
+cp .env.example .env
+
+php spark key:generate
+```
