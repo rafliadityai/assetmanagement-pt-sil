@@ -1,56 +1,54 @@
-# CodeIgniter 4 Framework
+# Framework CodeIgniter 4
 
-## What is CodeIgniter?
+## Apa Itu CodeIgniter?
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+CodeIgniter adalah sebuah framework web full-stack berbasis PHP yang ringan, cepat, fleksibel, dan aman.
+Informasi lebih lanjut dapat ditemukan di [situs resmi](http://codeigniter.com).
 
-This repository holds the distributable version of the framework,
-including the user guide. It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Repository ini berisi versi distribusi dari framework ini,
+termasuk panduan pengguna. Ini telah dibangun dari
+[repositori pengembangan](https://github.com/codeigniter4/CodeIgniter4).
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+Informasi lebih lanjut tentang rencana untuk versi 4 dapat ditemukan dalam [pengumuman](http://forum.codeigniter.com/thread-62615.html) di forum.
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+Panduan pengguna yang sesuai dengan versi framework ini dapat ditemukan
+[di sini](https://codeigniter4.github.io/userguide/).
 
+## Perubahan Penting dengan index.php
 
-## Important Change with index.php
+`index.php` tidak lagi berada di akar proyek! Itu telah dipindahkan ke dalam folder _public_,
+untuk keamanan yang lebih baik dan pemisahan komponen.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Ini berarti Anda harus mengkonfigurasi server web Anda untuk "menunjuk" ke folder _public_ proyek Anda, dan
+bukan ke akar proyek. Praktik yang lebih baik adalah mengkonfigurasi virtual host untuk menunjuk ke sana. Praktik yang kurang baik adalah mengarahkan server web Anda ke akar proyek dan berharap memasukkan _public/..._, karena logika Anda dan kerangka kerja lainnya akan terekspos.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+**Tolong** baca panduan pengguna untuk penjelasan yang lebih baik tentang bagaimana CI4 bekerja!
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## Pengelolaan Repository
 
-## Repository Management
+Kami menggunakan isu GitHub di repositori utama kami, untuk melacak **BUG** dan melacak paket pekerjaan **DEVELOPMENT** yang disetujui.
+Kami menggunakan [forum](http://forum.codeigniter.com) kami untuk memberikan DUKUNGAN dan untuk mendiskusikan
+PERMINTAAN FITUR.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+Repository ini adalah yang "distribusi", dibangun oleh skrip persiapan rilis kami.
+Masalah dengan ini dapat diajukan di forum kami, atau sebagai masalah di repositori utama.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## Berkontribusi
 
-## Contributing
+Kami menyambut kontribusi dari komunitas.
 
-We welcome contributions from the community.
+Silakan baca bagian [_Berkontribusi ke CodeIgniter_](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) di repositori pengembangan.
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+## Persyaratan Server
 
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
+Versi PHP 7.4 atau lebih tinggi diperlukan, dengan ekstensi berikut terpasang:
 
 - [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- [libcurl](http://php.net/manual/en/curl.requirements.php) jika Anda berencana menggunakan perpustakaan HTTP\CURLRequest
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+Selain itu, pastikan bahwa ekstensi berikut diaktifkan di PHP Anda:
 
-- json (enabled by default - don't turn it off)
+- json (diaktifkan secara default - jangan matikan)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+- xml (diaktifkan secara default - jangan matikan)
