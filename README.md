@@ -69,7 +69,7 @@ Sebelum memulai, pastikan Anda memiliki persyaratan berikut diinstal di sistem A
 1. Clone repositori ini ke direktori lokal Anda:
 
 ```bash
-git clone https://github.com/assetmanagement-pt-sil/nama_repositori.git/
+git clone https://github.com/assetmanagement-pt-sil/
 ```
 
 2. Masuk ke direktori proyek:
