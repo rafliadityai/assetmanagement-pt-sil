@@ -69,13 +69,50 @@ Sebelum memulai, pastikan Anda memiliki persyaratan berikut diinstal di sistem A
 1. Clone repositori ini ke direktori lokal Anda:
 
 ```bash
-git clone https://github.com/assetmanagement-pt-sil/nama_repositori.git
-
-cd nama_repositori
-
-composer install
-
-cp .env.example .env
-
-php spark key:generate
+git clone https://github.com/assetmanagement-pt-sil/nama_repositori.git/
 ```
+
+2. Masuk ke direktori proyek:
+
+```bash
+cd assetmanagement-pt-sil
+```
+
+3. Install dependensi menggunakan Composer:
+
+```bash
+composer install
+```
+
+4. Salin file .env:
+
+```bash
+cp .env.example .env
+```
+
+## Konfigurasi
+
+1. Buka file .env dan konfigurasikan pengaturan database:
+
+```
+database.default.hostname = localhost
+database.default.database = nama_database
+database.default.username = username_database
+database.default.password = password_database
+```
+
+2. Jalankan migrasi untuk membangun struktur database:
+
+```
+php spark migrate
+```
+
+## Menjalankan Projek
+
+Anda dapat menjalankan proyek menggunakan perintah berikut:
+
+```
+php spark serve
+```
+
+Aplikasi akan berjalan di http://localhost:8080.
